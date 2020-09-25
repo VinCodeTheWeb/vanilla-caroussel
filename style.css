@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  max-width: 1366px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #DDD;
+}
+
+.img {
+  width: 1366px;
+  height: inherit;
+}
+
+.fade {
+  animation: fade 1.5s ease;
+}
+
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all .3s;
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+  color: aqua;
+  transform: scale(1.25);
+}
+.prev:active,
+.next:active {
+  transform: scale(1);
+}
+
+.prev {
+  left: 3%;
+  transform: translateX(-3%);
+}
+
+.next {
+  right: 3%;
+  transform: translateX(-3%);
+}
+
+.circle {
+  position: absolute;
+  right: 50%;
+  bottom: 3%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #DDD;
+}
+
+.circle:hover {
+ cursor: pointer;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
